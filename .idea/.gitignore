@@ -2,4 +2,4 @@
 /shelf/
 /workspace.xml
 
-springSql/repository/src/main/resources/application.properties
+../repository/src/main/resources/application.properties
