@@ -10,6 +10,7 @@ public record FIndUserByIdUS(UserRepositoryPort userRepositoryPort) implements F
 
     @Override
     public User apply(String id) {
+
         return userRepositoryPort.findById(id)
                 .orElseThrow(() -> new RuntimeException("ID not found."));
     }

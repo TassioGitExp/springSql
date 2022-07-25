@@ -20,6 +20,5 @@ public record CreateUserUS(UserRepositoryPort userRepositoryPort) implements Cre
         user = userRepositoryPort.save(user);
 
         return user;
-
     }
 }

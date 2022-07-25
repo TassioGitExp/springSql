@@ -9,6 +9,9 @@ public record DeleteUserByIdUS(UserRepositoryPort userRepositoryPort) implements
 
     @Override
     public void apply(String id) {
-        userRepositoryPort.deleteById(id);
+        if (!userRepositoryPort.existsById(id))
+            throw new RuntimeException("User not found.");
+        else
+            userRepositoryPort.deleteById(id);
     }
 }

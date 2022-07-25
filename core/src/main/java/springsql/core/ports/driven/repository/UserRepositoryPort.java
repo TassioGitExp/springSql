@@ -2,6 +2,7 @@ package springsql.core.ports.driven.repository;
 
 import springsql.core.domain.User;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface UserRepositoryPort {
@@ -15,6 +16,8 @@ public interface UserRepositoryPort {
     Optional<User> findById (String id);
 
     Optional<User> findByEmail (String email);
+
+    List<User> findAll ();
 
     void deleteById (String id);
 
